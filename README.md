@@ -7,11 +7,11 @@ The raw data captured by smartphones consists of: **accelerations** along x, y, 
 For details, please reference to: 
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
-## Objective of the project is to do some data manipulations, i.e. clean up, and compute an aggregate on groups of the cleaned data.
+### Objective of the project is to do some data manipulations, i.e. clean up, and compute an aggregate on groups of the cleaned data.
 
-## Steps I took to achieve the goal
+**Steps I took to achieve the goal**
 
-* **1. Read in data**
+##1. Read in data
 
 The raw data is divided into a training set (to create a machine learning model), and a testing set (to evaluate the machine learning model).
 
@@ -28,18 +28,18 @@ Each column in X data file gets its name from the feature file.  I did minimum a
 * using cbind to combine each individual set together
 * using rbind to combine two sets together
 
-* **2. Subsetting the data frame for only mean and standard deviation columns**
+##2. Subsetting the data frame for only mean and standard deviation columns
 I define mean column as any column whose name contains "mean", case insensitive.  Standard deviation columns as any column whose name contains "_std", case insensitive.
 A vector of mean and std columns is created, and a subset data frame creating by column select on this vector.
 
-* **3. Group the subset data by subject (person_id) and activity**
+##3. Group the subset data by subject (person_id) and activity
 Using dplyr group_by function, a data.frame with groups is created.
 
-* **4. Create the result data set which calculates mean on all numeric measurement columns**
+##4. Create the result data set which calculates mean on all numeric measurement columns
 I used the summarize_each function in dplyr to calculate the mean on all columns by subject and activity.  This new data set is written as a **csv** file.
 
 ## script is: merge_n_clean_data.r
 
-## Result data file is by_subject_actv_mean.csv
-Please see the code book for definition of each column in this file.
+## Result data file is: by_subject_actv_mean.csv
+###Please see the code book for definition of each column in this file.
 
