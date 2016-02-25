@@ -38,8 +38,8 @@ Using dplyr group_by function, a data.frame with groups is created.
 ##4. Create the result data set which calculates mean on all numeric measurement columns
 I used the summarize_each function in dplyr to calculate the mean on all columns by subject and activity.  This new data set is written as a **csv** file.
 
-## script is: merge_n_clean_data.r
+### script is: merge_n_clean_data.r
 
-## Result data file is: by_subject_actv_mean.csv
-###Please see the code book for definition of each column in this file.
+### Result data file is: by_subject_actv_mean.csv
+### Please see the code book for definition of each column in this file.
 
