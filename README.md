@@ -38,8 +38,11 @@ Using dplyr group_by function, a data.frame with groups is created.
 ##4. Create the result data set which calculates mean on all numeric measurement columns
 I used the summarize_each function in dplyr to calculate the mean on all columns by subject and activity.  This new data set is written as a **csv** file.
 
-### script is: merge_n_clean_data.r
+### script is: run_analysis.r
+### !!! IMPORTANT directory note: 
+* I didn't want to mess around the original folder structure.  My r code expectes a directory "getdata-projectfiles-UCI HAR Dataset\CUI HAR Dateset" and the train and test folder as is from the zip.  It will go there to get all the X, y, subject data.
+* I didn't want to type all that column names, so I modified the feature.txt into a "names.txt" file.  This file is in this GitHub project.  Please **copy this file to your working directory**.
 
-### Result data file is: by_subject_actv_mean.csv
+### Result data file is: by_subject_actv_mean.txt in your R working directory
 ### Please see the code book for definition of each column in this file.
 
